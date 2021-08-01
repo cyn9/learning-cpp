@@ -1,6 +1,6 @@
 # learning-cpp
 
-##__Repository For Learning C++__
+### __Repository For Learning C++__
 
 __1: Exceptions:__
 * _01-Exception-Basics.cpp:_ Catching the error based on the type of the variable (`int`, `const char*` or `std::string`) in a function whenever the function is called.
