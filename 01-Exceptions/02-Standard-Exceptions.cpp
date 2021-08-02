@@ -12,8 +12,10 @@ int main() {
 	try {
 		Foo foo;
 	}
-	catch (std::bad_alloc &e) {
-		std::cout << "Caught an exception: \n";
+	// Catch argument with const reference if it is 
+	// an object.
+	catch (const std::bad_alloc &e) {
+		std::cout << "\n\nCaught an exception: \n";
 		std::cout << e.what() << '\n';
 	}
 	
