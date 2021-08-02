@@ -20,7 +20,7 @@ int main() {
 
 	if (outFile.is_open()) {
 		int count {1};
-		for (const auto e: V) {
+		for (const auto &e: V) {
 			outFile << "#" << count << ": " << e << std::endl;
 			count++;
 		}
