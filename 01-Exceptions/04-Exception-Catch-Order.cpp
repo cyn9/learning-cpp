@@ -23,10 +23,10 @@ int main() {
 	// throw exceptions from base classes. Otherwise there is a
 	// order problem due to the polymorphic relation between the base
 	// and the derived classes.
-	catch(const std::exception &e) {
-		std::cout << "Catching exception: " << e.what() << '\n';
-	}
 	catch(const std::bad_alloc &e) {
 		std::cout << "Catching bad alloc: " << e.what() << '\n';
+	}
+	catch(const std::exception &e) {
+		std::cout << "Catching exception: " << e.what() << '\n';
 	}
 }
