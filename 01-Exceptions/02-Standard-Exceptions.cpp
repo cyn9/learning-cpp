@@ -10,7 +10,7 @@ class Foo {
 
 int main() {
 	try {
-		Foo();
+		Foo foo;
 	}
 	catch (std::bad_alloc &e) {
 		std::cout << "Caught an exception: \n";
