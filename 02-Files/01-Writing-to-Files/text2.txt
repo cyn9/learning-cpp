@@ -1,0 +1,2 @@
+Fstream test. Hello, C++.
+987
