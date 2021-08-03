@@ -8,5 +8,6 @@
 
 *.o
 *.out
+*.bin
 
 .vscode/
