@@ -9,5 +9,6 @@
 * _04-Exception-Catch-Order.cpp:_ Exception catch order is important. The order should follow for proper error throw: First, throw exception classes that are derived from the base class (`std::exception` in this case). Then, `std::exception` must be thrown. There could be a problem throwing the correct exception due to the fact that there is a polymorphic relationship between derived exception class and base `std::exception` class.
 
 ### __<ins>2: Files:</ins>__
-* _01-Writing-to-Files >> test.cpp:_ Creates and opens a text file using `std::ofstream`. Writes a basic string and an integer to the file.
-* _01-Writing-to-Files >> fstream\_test.cpp:_ Switched from `std::ofstream` to `std::fstream`. This is basically the same thing if an extra argument (`std::ios::out`) to the `open()` function.
+* _01-Writing-to-Files 
+    * test.cpp:_ Creates and opens a text file using `std::ofstream`. Writes a basic string and an integer to the file.
+    * _01-Writing-to-Files >> fstream\_test.cpp:_ Switched from `std::ofstream` to `std::fstream`. This is basically the same thing if an extra argument (`std::ios::out`) to the `open()` function.
