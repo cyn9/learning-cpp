@@ -10,5 +10,5 @@
 
 ### __<ins>2: Files:</ins>__
 * _01-Writing-to-Files 
-    * test.cpp:_ Creates and opens a text file using `std::ofstream`. Writes a basic string and an integer to the file.
-    * _01-Writing-to-Files >> fstream\_test.cpp:_ Switched from `std::ofstream` to `std::fstream`. This is basically the same thing if an extra argument (`std::ios::out`) to the `open()` function.
+    * _test.cpp:_ Creates and opens a text file using `std::ofstream`. Writes a basic string and an integer to the file.
+    * _stream\_test.cpp:_ Switched from `std::ofstream` to `std::fstream`. This is basically the same thing if an extra argument (`std::ios::out`) to the `open()` function.
