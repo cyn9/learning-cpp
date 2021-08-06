@@ -54,8 +54,8 @@ int main() {
 }
 
 template <typename T>
-void printRingBuffer(const Ring<T> &ring) {
-    for (auto i = 0; i < ring.getSize(); ++i) {
-        std::cout << i+1 << ": " << ring.get(i) << std::endl;
+void printRingBuffer(const Ring<T> &buffer) {
+    for (auto i = 0; i < buffer.getSize(); ++i) {
+        std::cout << i+1 << ": " << buffer.get(i) << std::endl;
     }
 }
