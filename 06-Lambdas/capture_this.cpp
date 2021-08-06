@@ -14,7 +14,9 @@ class Test {
 
             // To be able to use private members of the class (which are actually of 
             // class instances), "this" needs to be captured by the lambda.
-            auto foo = [this, &x, &y]() {
+            // Example lambda here: pass all local variables as reference, and pass 
+            // "this" as well.
+            auto foo = [&, this]() {
                 // "this" is passed to the lambda by reference (default).
                 // this->a = 100;
                 // this->b = 200;
