@@ -36,14 +36,20 @@ class Foo {
 };
 
 std::ostream &operator<<(std::ostream &out, const Foo &obj) {
-    obj.print();
+    out << obj.id << ": " << obj.name;
 
     return out;
 }
 
 int main() {
+    // Single stream insertion operator:
     Foo f {99, "John Doe"};
-    std::cout << f;
+    std::cout << f << '\n';
+
+    // Multiple stream insertion operators:
+    Foo foo1 {1, "Jane"};
+    Foo foo2 {2, "Jasper"};
+    std::cout << foo1 << ", " << foo2 << '\n';
 
     return 0;
 }
