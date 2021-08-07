@@ -31,27 +31,19 @@ class Foo {
              return *this;
         }
 
-        // Setters:
-        void setID(int id)             { this->id = id; }
-        void setName(std::string name) { this->name = name; }
+        // Overloading stream insertion operator:
+        friend std::ostream &operator<<(std::ostream &out, const Foo &source);
 };
 
+std::ostream &operator<<(std::ostream &out, const Foo &obj) {
+    obj.print();
+
+    return out;
+}
+
 int main() {
-    Foo foo1 {1, "John Doe"};
-    foo1.print();
-
-    Foo foo2 = foo1; // Calls copy constructor as it is copy initialization.
-    foo2.print();
-
-    Foo foo3;
-    foo3 = foo2; // Assignment operator overloaded.
-
-    foo3.setName("Jane Doe");
-    foo3.setID(99);
-
-    Foo foo4;
-    foo4.operator=(foo3); // Same thing with foo4 = foo3.
-    foo4.print();
+    Foo f {99, "John Doe"};
+    std::cout << f;
 
     return 0;
 }
