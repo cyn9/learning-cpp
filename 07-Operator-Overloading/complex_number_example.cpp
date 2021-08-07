@@ -57,7 +57,7 @@ namespace test {
         return src1.getRe() != src2.getRe() || src1.getIm() != src2.getIm();
     }
     
-    // Stream insertion operator overloading:
+    // Stream extraction operator overloading:
     std::ostream &operator<<(std::ostream &out, const Complex &obj) {
         out << "z = " << obj.getRe() 
                       << (obj.getIm() < 0 ? " - j" : " + j") 

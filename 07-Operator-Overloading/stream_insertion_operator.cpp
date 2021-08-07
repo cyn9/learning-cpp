@@ -31,7 +31,7 @@ class Foo {
              return *this;
         }
 
-        // Overloading stream insertion operator:
+        // Overloading stream extraction operator:
         friend std::ostream &operator<<(std::ostream &out, const Foo &source);
 };
 
@@ -42,11 +42,11 @@ std::ostream &operator<<(std::ostream &out, const Foo &obj) {
 }
 
 int main() {
-    // Single stream insertion operator:
+    // Single stream extraction operator:
     Foo f {99, "John Doe"};
     std::cout << f << '\n';
 
-    // Multiple stream insertion operators:
+    // Multiple stream extraction operators:
     Foo foo1 {1, "Jane"};
     Foo foo2 {2, "Jasper"};
     std::cout << foo1 << ", " << foo2 << '\n';
