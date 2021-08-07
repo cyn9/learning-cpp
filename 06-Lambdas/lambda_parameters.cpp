@@ -1,5 +1,13 @@
 #include <iostream>
 #include <string>
+#include <exception>
+
+class ArithmeticException : public std::exception {
+    public:
+        virtual const char* what() const noexcept {
+            return "Cannot divide by zero.\n";
+        }
+};
 
 void test_greet_func(void (*pFunc)(std::string), std::string text) {
     pFunc(text);
@@ -29,8 +37,13 @@ int main() {
         // output. In this case, if y is zero then it returns 0
         // which is an integer. Therefore, the return type in the
         // lambda must be stated explicitly.
-        if (y == 0)
-            return 0;
+        try {
+            if (y == 0) throw ArithmeticException();
+        }
+        catch (ArithmeticException &e) {
+            std::cout << e.what();
+            return 0.0;
+        }
         
         return x / y;
     };
