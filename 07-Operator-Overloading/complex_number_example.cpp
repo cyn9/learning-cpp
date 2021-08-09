@@ -29,6 +29,11 @@ namespace test {
                 
                 return *this;
             }
+
+            // Overloading dereferencing operator:
+            inline const Complex operator*() const {
+                return { this->getRe(), -this->getIm() };
+            }
     };
 
     // Addition operator overloading: (adding two complex numbers)
@@ -55,11 +60,6 @@ namespace test {
     // Overloading not equals sign operator:
     inline bool operator!=(const Complex &src1, const Complex &src2) {
         return src1.getRe() != src2.getRe() || src1.getIm() != src2.getIm();
-    }
-
-    // Overloading dereferencing operator:
-    inline Complex operator*(const Complex &src) {
-        return {src.getRe(), -src.getIm()};
     }
     
     // Stream extraction operator overloading:
