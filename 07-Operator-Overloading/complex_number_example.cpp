@@ -56,6 +56,13 @@ namespace test {
     inline bool operator!=(const Complex &src1, const Complex &src2) {
         return src1.getRe() != src2.getRe() || src1.getIm() != src2.getIm();
     }
+
+    // Overloading dereferencing operator:
+    inline Complex operator*(const Complex &src) {
+        Complex temp { src.getRe(), -src.getIm() };
+
+        return temp;
+    }
     
     // Stream extraction operator overloading:
     std::ostream &operator<<(std::ostream &out, const Complex &obj) {
@@ -95,6 +102,16 @@ int main() {
     std::cout << (z1 == z2) << '\n';
     std::cout << (test1 == test3) << '\n';
     std::cout << (test::Complex {2, -5} == z1) << '\n';
+
+    // Complex conjugate tests:
+    test::Complex z4 {2, 3};
+    test::Complex z5 {-5, -5};
+    
+    std::cout << "z4 is " << z4;
+    std::cout << "z4* is " << *z4;
+    
+    std::cout << "z5 is " << z5;
+    std::cout << "z5* is " << *z5;
     
     return 0;
 }
