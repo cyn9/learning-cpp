@@ -59,9 +59,7 @@ namespace test {
 
     // Overloading dereferencing operator:
     inline Complex operator*(const Complex &src) {
-        Complex temp { src.getRe(), -src.getIm() };
-
-        return temp;
+        return { src.getRe(), -src.getIm() };;
     }
     
     // Stream extraction operator overloading:
