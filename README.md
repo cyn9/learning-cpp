@@ -2,6 +2,14 @@
 
 ## __Repository For Learning C++__
 
+### __<ins>0: Basics:</ins>__
+* _Copy\_Elision.cpp:_ Copy elision refers a compiler optimization technique that eliminates unnecessary copying of objects. As defined by cppreference.com, copy elision omits copy and move constructors, resulting in zero-copy pass-by-value semantics.
+* _Default\_Constructor.cpp:_ This example includes explicitly defaulted no-arg and copy constructors. Another constructor (single-arg constructor) exists, therefore, for `Test` class `Test::Test()` needs to be implemented or declared explicitly.
+* _Functions\_Auto.cpp:_ This example demostrates `decltype` can replace the return type of a function when the return type of some other function is known. Also, it is possible to replace the return type of a function with `auto` and the return type can be specified using arrow operator `->` after specifying the function input parameter list.
+* _Initializer\_List.cpp:_ From standard C++ library, `std::initializer_list` can be used to provide a set of values that can further be used to initialize an array, vector or other data structure that is a private or public member of a class.
+* _Static\_Members.cpp:_ Demonstrates the usage of a `static` member in a class. As an example, it is good to visualize the usage of a static member in the presence of delegating constructors to see how many times the constructors are called and how the value of a static member varies accordingly.
+* _Types.cpp:_ Usage of `typeid` from `<typeinfo>` header. Also includes the usage of `decltype` as well.
+
 ### __<ins>1: Exceptions:</ins>__
 * _01-Exception-Basics.cpp:_ Catching the error based on the type of the variable (`int`, `const char*` or `std::string`) in a function whenever the function is called.
 * _02-Standard-Exceptions.cpp:_ Standard exceptions are derived from `std::exception` base class that has virtual class functions. Each derived standard exception class (`std::bad_alloc` in this example) has already implemented virtual `what()` function. A custom exception class that inherits from `std::exception` can be created and virtual member functions can be implemented.
