@@ -22,6 +22,12 @@
     * _stream\_test.cpp:_ Switched from `std::ofstream` to `std::fstream`. This is basically the same thing if an extra argument (`std::ios::out`) to the `open()` function.
 * 02-Writing-Example:
     * _test.cpp:_ Given the number of lines `N`, a text file is created and opened. Integer numbers starting from `1` to `N` are written to the text file.
+* 03-Reading-Text-Files:
+    * _test.cpp:_ A file can be read using `std::fstream` along with passing `std::ios::in` to the `open()` function. When the file is open (can be checked via `is_open()` function), a `while` loop can be used to read the file content into a `std::string`. The termination condition for the while loop is the end of the file flag (EOF). It can be checked via `eof()` function.
+* 04-Parsing-Text-Files:
+    * _parse.cpp:_ `std::getline` can be used to read a line from a file. A delimiter can also be passed into the getline function to separate different entities such as a `std::string` and an integer. To discard the newline character, `std::ws` can be used.
+* 05-Struct-Padding:
+    * _test.cpp:_ A pragma preprocessor can be used to align the data with byte boundaries. If the data is stored in a `struct`, that particular struct implementation is surrounded by the `#pragma` directive in order to prevent struct padding. This example writes data to a file in binary by OR-ing `std::ios::binary | std::ios::out` in `open()` function. To check if everything is correct, the file is read afterwards. Also, this example demonstrates a C++20 style "designated initializers" when initializing a struct.
 
 ### __<ins>3: STL:</ins>__
 * 01-Vectors:
@@ -40,3 +46,7 @@
     * _custom\_objects\_2.cpp:_ A class object can be `value` in the map. Here, it is possible to overload comparison operator (`operator<`) to make a suitable ordering for key values in the map that are of `string` variable in `Person` class. Although the names are the same, since the ages are different, then the keys are also different.
     * _multimap\_test.cpp:_ Multimap is also an associative container with a sorted key-value pairs. It permits multiple entries with the same key.
     * _cdt\_test.cpp:_ An example program for testing complex data types as key and/or value pairs. Here, key is of `std::string` while value is of `std::vector<int>`.
+* 06-Sets:
+    * _set_test.cpp:_ A simple example program for `std::set`. A set is a container that contains a sorted unique objects or values of type `T`.
+* 07-Stacks-and-Queues:
+    * _test.cpp:_ Important to know that Stack = LIFO and Queue = FIFO. Stacks are not iterable. Last added value should be popped out of the container using `pop()` function. Adding an element is done via `push()` function. Also, a reference to the topmost element in the stack can be returned by calling `top()` function. Once the topmost element is popped from the stack, the reference variable to that element is invalidated.
